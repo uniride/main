@@ -1,0 +1,19 @@
+<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
+<a href="<?php echo $this->addCarLink ?>">Fahrzeug hinzufügen</a>
+
+<p>
+	<?php foreach ($this->cars as $car): ?>
+</p>
+<p>
+	Fahrzeug ID:	<?php echo $car['c_Id']; ?><br />
+	Hersteller:		<?php echo $car['c_Manufacturer']; ?><br />
+	Modell:			<?php echo $car['c_Model']; ?><br />
+	Kennzeichen:	<?php echo $car['c_Sign']; ?><br />
+	Farbe:			<?php echo $car['c_Color']; ?><br />
+ 	Sitzplätze:		<?php echo $car['c_Seats']; ?><br />
+	<a href="<?php echo $this->deleteCarLink; ?>/id/<?php echo $car['c_Id']; ?>">Löschen</a> / <a href="<?php echo $this->editCarLink; ?>/id/<?php echo $car['c_Id']; ?>">Beabeiten</a>
+	<br />
+</p>
+<p>
+  <?php endforeach; ?>
+</p>

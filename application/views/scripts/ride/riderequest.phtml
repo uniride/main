@@ -1,0 +1,148 @@
+<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
+<br /><br />
+<script>
+	$(function() {
+		$( "#datePicker" ).datepicker({
+											dateFormat: "dd. MM yy",
+											monthNames: [ "Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember" ],
+											dayNamesMin: [ "So", "Mo", "Di", "Mi", "Do", "Fr", "Sa" ],
+											firstDay: 1,
+											altField: "#date",
+											altFormat: "yy-mm-dd"
+										});
+	});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    <script>
+    var lat;
+    var lng;
+    var addressname;
+    
+      function initialize() {
+        var input = document.getElementById('start');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+          input.className = '';
+          var place = autocomplete.getPlace();
+          if (!place.geometry) {
+            // Inform the user that the place was not found and return.
+            input.className = 'notfound';
+            return;
+          }
+
+          var address = '';
+          if (place.address_components) {
+            address = [
+              (place.address_components[0] && place.address_components[0].short_name || ''),
+              (place.address_components[1] && place.address_components[1].short_name || ''),
+              (place.address_components[2] && place.address_components[2].short_name || '')
+            ].join(' ');
+          }
+
+          lat = place.geometry.location.lat();
+          lng = place.geometry.location.lng();
+          addressname = place.formatted_address;
+          });
+      }
+
+      function sendJson() {
+    	  var start = {
+                  "lat": '"'+lat+'"',
+                  "lng": '"'+lng+'"',
+                  "address": '"'+addressname+'"'
+          };
+    	  var destination = {
+                  "koords": '"'+document.getElementById('end').value+'"'
+          };
+		  var toleranceDuration = '"'+document.getElementById('toleranceDuration').value+'"';
+		  
+		  var dateAndTime = '"' + document.getElementById('date').value + ' ' + document.getElementById('hours').value + ':' + document.getElementById('minutes').value + '"';
+ 
+          $.post("/de/ride/saverouterequest", {
+              start: JSON.stringify(start),
+              destination: JSON.stringify(destination),
+			  toleranceDuration: JSON.stringify(toleranceDuration),
+			  dateAndTime: JSON.stringify(dateAndTime)
+              });
+		 alert("Jawoll ja! Danke!");
+      }
+      
+      window.onload = initialize;
+    </script>
+    
+    <div>
+    <?php print_r($this->test); ?><br /><br />
+    <b>Start: </b>
+    <input type="text" id="start" style="width: 200px;" />
+    <!-- <b>Zwischenziel:</b>
+    <input type="text" id="waypoint" />  -->
+    <b>End: </b>
+    <select id="end">
+    <?php foreach($this->travelpoints as $destination): ?>
+    	<option value="<?php echo $destination['t_lat']; ?>,<?php echo $destination['t_lng']; ?>">
+    		<?php echo $destination['t_name']; ?>
+    	</option>
+    <?php endforeach; ?>
+    </select>
+    <br />
+	<br />
+	<b>Zeitliche Flexibilität: </b>
+	<select id="toleranceDuration">
+		<option value="0">egal</option>
+		<option value="10">+/- 10 Minuten</option>
+		<option value="30">+/- 30 Minuten</option>
+		<option value="60">+/- 60 Minuten</option>
+	</select>
+	<br />
+	<b>Datum / Uhrzeit: </b>
+	<input id="datePicker" type="text" />
+	&nbsp;
+	<select id="hours">
+		<option value="00">00</option>
+		<option value="01">01</option>	
+		<option value="02">02</option>
+		<option value="03">03</option>
+		<option value="04">04</option>
+		<option value="05">05</option>
+		<option value="06">06</option>
+		<option value="07">07</option>
+		<option value="08">08</option>
+		<option value="09">09</option>
+		<option value="10">10</option>
+		<option value="11">11</option>
+		<option value="12">12</option>
+		<option value="13">13</option>
+		<option value="14">14</option>
+		<option value="15">15</option>
+		<option value="16">16</option>
+		<option value="17">17</option>
+		<option value="18">18</option>
+		<option value="19">19</option>
+		<option value="20">20</option>
+		<option value="21">21</option>
+		<option value="22">22</option>
+		<option value="23">23</option>
+	</select>
+	&nbsp;
+	<select id="minutes">
+		<option value="00">00</option>
+		<option value="05">05</option>
+		<option value="10">10</option>
+		<option value="15">15</option>
+		<option value="20">20</option>
+		<option value="25">25</option>
+		<option value="30">30</option>
+		<option value="35">35</option>
+		<option value="40">40</option>
+		<option value="45">45</option>
+		<option value="50">50</option>
+		<option value="55">55</option>
+	</select>	
+	<input id="date" type="hidden" />
+    <br />
+	<br />
+    <a href="#" onclick="sendJson();">speichern</a>
+    <br /><br />
+    <span id="debug"></span>
+    </div>

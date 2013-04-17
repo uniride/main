@@ -1,0 +1,31 @@
+<?php  $this->translation = Zend_Registry::get('Zend_Translate'); ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Uniride</title>
+<link href="/css/cssdoc.css" rel="stylesheet" type="text/css" />
+<link href="/css/jquery.Jcrop.css" rel="stylesheet" type="text/css" />
+<link href="/css/jquery-ui.css" rel="stylesheet" />
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+<?php echo $this->headScript() ?>
+</head>
+
+<body>
+<div class="head-wrapper">
+	<div class="head">
+	<a href="/" class="logo"></a>
+	<a href="#" class="logo_manager"></a>
+	</div>
+</div>
+
+<?php 
+   echo $this->layout()->content;
+?>
+
+</body>
+</html>

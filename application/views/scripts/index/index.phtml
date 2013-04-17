@@ -1,0 +1,52 @@
+<?php  $this->translation = Zend_Registry::get('Zend_Translate'); ?>
+<div class="Manager">
+<div class="Left">
+	<div class="LeftHeader">
+		<?php echo $this->translation->translate("Navigation"); ?>
+	</div>
+	<div class="Info">
+	<?php echo $this->translation->translate("Welcome"); ?>,<br />
+	<?php echo $this->Fullname; ?>
+	</div>
+	<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
+	
+</div>
+<div class="Right">
+	<div class="RightHeader">
+		<?php echo $this->translation->translate("Uniride.de"); ?>
+	</div>
+	<div class="Content">
+	<div><?php echo $this->translation->translate("Willkommen bei der MFZ der Uni Siegen"); ?></div>
+	<?php if($this->user): ?>
+		<img src="https://graph.facebook.com/<?php echo $this->user['username']?>/picture"/>
+		<?php echo $this->userProfile['name']; ?><br />
+		<?php echo $this->userProfile['gender']; ?><br />
+		<?php echo (key_exists('email', $this->userProfile)) ? $this->userProfile['email'] : ""; ?><br />
+		<?php echo $this->userProfile['id']; ?><br />
+		<br />
+		<br />
+		<a href="<?php echo $this->logoutUrl; ?>">Facebook Logout</a>
+		<?php //print_r($this->userProfile); ?>
+		<br >
+		<?php //print_r($this->userFriends); ?>
+		<br /><br />
+		<?php if(false): ?>
+			<?php  foreach($this->userFriends['data'] as $friend): ?>
+				<img src="https://graph.facebook.com/<?php echo $friend['id']?>/picture?type=square"/>
+				<?php echo $friend['name']; ?><br />
+				<br />
+			<?php endforeach; ?>
+		<?php endif; ?>
+	<?php else: ?>
+		<a href="<?php echo $this->loginUrl; ?>">Facebook Login</a>
+	<?php endif; ?>
+	<div id="chart_div1" style="float:left;"></div>
+	<div id="chart_div2" style="float:left;"></div>
+	<div class="clearfix"></div>
+	</div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+
+

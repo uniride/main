@@ -1,0 +1,22 @@
+<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
+
+<div>
+<div style="float: left; height: 25px; width: 70px; display: inline-block;"></div>
+<div style="float: left; height: 25px; width: 150px; display: inline-block;">Datum</div>
+<div style="float: left; height: 25px; width: 325px; display: inline-block;">Start</div>
+<div style="float: left; height: 25px; width: 150px; display: inline-block;">Ende</div>
+<div style="float: left; height: 25px; width: 150px; display: inline-block;">Strecke</div>
+<div style="float: left; height: 25px; width: 150px; display: inline-block;">Dauer</div>
+<div style="float: left; height: 25px; width: 150px; display: inline-block;">Funktion</div>
+<div style="clear: both;"></div>
+<?php foreach($this->routes as $route): ?>
+	<div style="float: left; height: 25px; width: 70px; display: inline-block;"><a href="<?php echo $this->deleteRideLink; ?>/id/<?php echo $route['r_id']; ?>">Löschen</a></div>
+	<div style="float: left; height: 25px; width: 150px; display: inline-block;"><?php echo $route['r_datetime']; ?></div>
+	<div style="float: left; height: 25px; width: 325px; display: inline-block;"><?php echo $route['startpoint']; ?></div>
+	<div style="float: left; height: 25px; width: 150px; display: inline-block;"><?php echo $route['endpoint']; ?></div>
+	<div style="float: left; height: 25px; width: 150px; display: inline-block;"><?php echo $route['r_distance'] / 1000; ?> km</div>
+	<div style="float: left; height: 25px; width: 150px; display: inline-block;"><?php echo round($route['r_duration'] / 60, 2); ?> min</div>
+	<div style="float: left; height: 25px; width: 150px; display: inline-block;"></div>
+	<div style="clear: both;"></div>	
+<?php endforeach; ?>
+</div>
