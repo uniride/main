@@ -16,6 +16,10 @@ class AccountController extends Zend_Controller_Action
 	
     public function indexAction()
     {
+    	if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+    		$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+    	}
+    	 
     	$dbCars = new Model_Account_DbCars();
 
     	$cars = $dbCars->getCarsByUserId($this->sGlobal->uId);
@@ -30,7 +34,12 @@ class AccountController extends Zend_Controller_Action
 		
     }
     
-    public function addcarAction() {
+    public function addcarAction()
+    {
+    	if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+    		$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+    	}
+    	 
     	$addCarForm = $this->getAddCarForm();
     	$this->view->addCarForm = $addCarForm;
     	
@@ -54,7 +63,12 @@ class AccountController extends Zend_Controller_Action
     	}
     }
     
-	public function deletecarAction() {
+	public function deletecarAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		
 		$dbCars = new Model_Account_DbCars();
 		$request = $this->getRequest ();
@@ -62,7 +76,12 @@ class AccountController extends Zend_Controller_Action
 		$this->_helper->redirector->gotoRoute ( array( 'controller' => 'account', 'action' => 'index'), 'default');
 	}
 	
-	public function editcarAction() {
+	public function editcarAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		$editCarForm = $this->getEditCarForm();
 		$dbCars = new Model_Account_DbCars();
 		

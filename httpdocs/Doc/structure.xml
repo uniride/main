@@ -1,0 +1,2130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0a12" title="Uniride">
+  <file path="layouts/default-page.phtml" hash="7d789a0297ebbdd670929724c00d5f0a" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file layouts/default-page.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="plugins/Navigation.php" hash="645e7cd47daf1c8e426877962de01f97" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Zend_Controller_Plugin_Abstract</extends>
+      <name>Plugin_Navigation</name>
+      <full_name>\Plugin_Navigation</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>createNavigation</name>
+        <full_name>createNavigation</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="62" package="Default">
+        <name>routeShutdown</name>
+        <full_name>routeShutdown</full_name>
+        <argument line="62">
+          <name>$request</name>
+          <default/>
+          <type>\Zend_Controller_Request_Abstract</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file plugins/Navigation.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Plugin_Navigation</error>
+      <error line="5" code="50010">No DocBlock was found for method createNavigation()</error>
+      <error line="62" code="50010">No DocBlock was found for method routeShutdown()</error>
+    </parse_markers>
+  </file>
+  <file path="plugins/Language.php" hash="890fc794f2697f0989d3d878acad9006" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Zend_Controller_Plugin_Abstract</extends>
+      <name>Plugin_Language</name>
+      <full_name>\Plugin_Language</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>routeShutdown</name>
+        <full_name>routeShutdown</full_name>
+        <argument line="5">
+          <name>$request</name>
+          <default/>
+          <type>\Zend_Controller_Request_Abstract</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file plugins/Language.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Plugin_Language</error>
+      <error line="5" code="50010">No DocBlock was found for method routeShutdown()</error>
+    </parse_markers>
+  </file>
+  <file path="controllers/ErrorController.php" hash="faa99d5555fc3d629fabaadd3df0046c" package="Zend\Cloud\examples">
+    <docblock line="2">
+      <description>Zend Framework</description>
+      <long-description>&lt;p&gt;LICENSE&lt;/p&gt;
+
+&lt;p&gt;This source file is subject to the new BSD license that is bundled
+with this package in the file LICENSE.txt.
+It is also available through the world-wide-web at this URL:
+http://framework.zend.com/license/new-bsd
+If you did not receive a copy of the license and are unable to
+obtain it through the world-wide-web, please send an email
+to license@zend.com so we can send you a copy immediately.&lt;/p&gt;</long-description>
+      <tag line="2" name="category" description="Zend"/>
+      <tag line="2" name="package" description="Zend_Cloud"/>
+      <tag line="2" name="subpackage" description="examples"/>
+      <tag line="2" name="copyright" description="Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)"/>
+      <tag line="2" name="license" description="http://framework.zend.com/license/new-bsd     New BSD License"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="29" package="Zend\Cloud\examples">
+      <extends>\Zend_Controller_Action</extends>
+      <name>ErrorController</name>
+      <full_name>\ErrorController</full_name>
+      <docblock line="22">
+        <description/>
+        <long-description/>
+        <tag line="22" name="category" description="Zend"/>
+        <tag line="22" name="package" description="Zend_Cloud"/>
+        <tag line="22" name="subpackage" description="examples"/>
+        <tag line="22" name="copyright" description="Copyright (c) 2005-2010 Zend Technologies USA Inc. (http://www.zend.com)"/>
+        <tag line="22" name="license" description="http://framework.zend.com/license/new-bsd     New BSD License"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="31" package="Zend\Cloud\examples">
+        <name>errorAction</name>
+        <full_name>errorAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="64" package="Zend\Cloud\examples">
+        <name>getLog</name>
+        <full_name>getLog</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <critical line="22" code="50005">No short description for class \ErrorController</critical>
+      <error line="31" code="50010">No DocBlock was found for method errorAction()</error>
+      <error line="64" code="50010">No DocBlock was found for method getLog()</error>
+    </parse_markers>
+  </file>
+  <file path="controllers/RideController.php" hash="82d3114fe3e9699f5c76315abc7252f4" package="Default">
+    <class final="false" abstract="false" namespace="global" line="9" package="Default">
+      <extends>\Zend_Controller_Action</extends>
+      <name>RideController</name>
+      <full_name>\RideController</full_name>
+      <docblock line="3">
+        <description/>
+        <long-description/>
+        <tag line="3" name="author" description=""/>
+        <tag line="3" name="version" description="1.0"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="Default">
+        <name>init</name>
+        <full_name>init</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>indexAction</name>
+        <full_name>indexAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="Default">
+        <name>saverouteAction</name>
+        <full_name>saverouteAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="43" package="Default">
+        <name>showAction</name>
+        <full_name>showAction</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controllers/RideController.php</error>
+      <critical line="3" code="50005">No short description for class \RideController</critical>
+      <error line="12" code="50010">No DocBlock was found for method init()</error>
+      <error line="17" code="50010">No DocBlock was found for method indexAction()</error>
+      <error line="24" code="50010">No DocBlock was found for method saverouteAction()</error>
+      <error line="43" code="50010">No DocBlock was found for method showAction()</error>
+    </parse_markers>
+  </file>
+  <file path="controllers/FacebookAPI/base_facebook.php" hash="42438085b7e121db04316af3c64b6ee4" package="Default">
+    <docblock line="2">
+      <description>Copyright 2011 Facebook, Inc.</description>
+      <long-description>&lt;p&gt;Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.apache.org/licenses/LICENSE-2.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.&lt;/p&gt;</long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="30" package="Default">
+      <extends>\Exception</extends>
+      <name>FacebookApiException</name>
+      <full_name>\FacebookApiException</full_name>
+      <docblock line="25">
+        <description>Thrown when an API call returns an exception.</description>
+        <long-description/>
+        <tag line="25" name="author" description="Naitik Shah &lt;naitik@facebook.com&gt;"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="35" namespace="global" package="Default">
+        <name>$result</name>
+        <default/>
+        <docblock line="32">
+          <description>The result from the API server that represents the exception information.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="42" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="37">
+          <description>Make a new API Exception with the given result.</description>
+          <long-description/>
+          <tag line="37" name="param" description="The result from the API server" type="array" variable="$result">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="42">
+          <name>$result</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="68" package="Default">
+        <name>getResult</name>
+        <full_name>getResult</full_name>
+        <docblock line="63">
+          <description>Return the associated result object returned by the API server.</description>
+          <long-description/>
+          <tag line="63" name="return" description="The result from the API server" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="78" package="Default">
+        <name>getType</name>
+        <full_name>getType</full_name>
+        <docblock line="72">
+          <description>Returns the associated type for the error.</description>
+          <long-description>&lt;p&gt;This will default to
+'Exception' when a type is not available.&lt;/p&gt;</long-description>
+          <tag line="72" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="100" package="Default">
+        <name>__toString</name>
+        <full_name>__toString</full_name>
+        <docblock line="95">
+          <description>To make debugging easier.</description>
+          <long-description/>
+          <tag line="95" name="return" description="The string representation of the error" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <class final="false" abstract="true" namespace="global" line="118" package="Default">
+      <extends/>
+      <name>BaseFacebook</name>
+      <full_name>\BaseFacebook</full_name>
+      <docblock line="109">
+        <description>Provides access to the Facebook Platform.</description>
+        <long-description>&lt;p&gt;This class provides
+a majority of the functionality needed, but the class is abstract
+because it is designed to be sub-classed.  The subclass must
+implement the four abstract methods listed at the bottom of
+the file.&lt;/p&gt;</long-description>
+        <tag line="109" name="author" description="Naitik Shah &lt;naitik@facebook.com&gt;"/>
+      </docblock>
+      <constant namespace="global" line="123" package="Default">
+        <name>VERSION</name>
+        <full_name>VERSION</full_name>
+        <value>'3.2.2'</value>
+        <docblock line="120">
+          <description>Version.</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <constant namespace="global" line="128" package="Default">
+        <name>SIGNED_REQUEST_ALGORITHM</name>
+        <full_name>SIGNED_REQUEST_ALGORITHM</full_name>
+        <value>'HMAC-SHA256'</value>
+        <docblock line="125">
+          <description>Signed Request Algorithm.</description>
+          <long-description/>
+        </docblock>
+      </constant>
+      <property final="false" static="true" visibility="public" line="133" namespace="global" package="Default">
+        <name>$CURL_OPTS</name>
+        <default>array(CURLOPT_CONNECTTIMEOUT =&gt; 10, CURLOPT_RETURNTRANSFER =&gt; true, CURLOPT_TIMEOUT =&gt; 60, CURLOPT_USERAGENT =&gt; 'facebook-php-3.2')</default>
+        <docblock line="130">
+          <description>Default options for curl.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="protected" line="144" namespace="global" package="Default">
+        <name>$DROP_QUERY_PARAMS</name>
+        <default>array('code', 'state', 'signed_request')</default>
+        <docblock line="140">
+          <description>List of query parameters that get automatically dropped when rebuilding
+the current URL.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="true" visibility="public" line="153" namespace="global" package="Default">
+        <name>$DOMAIN_MAP</name>
+        <default>array('api' =&gt; 'https://api.facebook.com/', 'api_video' =&gt; 'https://api-video.facebook.com/', 'api_read' =&gt; 'https://api-read.facebook.com/', 'graph' =&gt; 'https://graph.facebook.com/', 'graph_video' =&gt; 'https://graph-video.facebook.com/', 'www' =&gt; 'https://www.facebook.com/')</default>
+        <docblock line="150">
+          <description>Maps aliases to Facebook domains.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="167" namespace="global" package="Default">
+        <name>$appId</name>
+        <default/>
+        <docblock line="162">
+          <description>The Application ID.</description>
+          <long-description/>
+          <tag line="162" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="174" namespace="global" package="Default">
+        <name>$appSecret</name>
+        <default/>
+        <docblock line="169">
+          <description>The Application App Secret.</description>
+          <long-description/>
+          <tag line="169" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="181" namespace="global" package="Default">
+        <name>$user</name>
+        <default/>
+        <docblock line="176">
+          <description>The ID of the Facebook user, or 0 if the user is logged out.</description>
+          <long-description/>
+          <tag line="176" name="var" description="" type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="186" namespace="global" package="Default">
+        <name>$signedRequest</name>
+        <default/>
+        <docblock line="183">
+          <description>The data from the signed_request token.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="191" namespace="global" package="Default">
+        <name>$state</name>
+        <default/>
+        <docblock line="188">
+          <description>A CSRF state variable to assist in the defense against CSRF attacks.</description>
+          <long-description/>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="199" namespace="global" package="Default">
+        <name>$accessToken</name>
+        <default>null</default>
+        <docblock line="193">
+          <description>The OAuth access token received in exchange for a valid authorization
+code.</description>
+          <long-description>&lt;p&gt;null means the access token has yet to be determined.&lt;/p&gt;</long-description>
+          <tag line="193" name="var" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="206" namespace="global" package="Default">
+        <name>$fileUploadSupport</name>
+        <default>false</default>
+        <docblock line="201">
+          <description>Indicates if the CURL based @ syntax for file uploads is enabled.</description>
+          <long-description/>
+          <tag line="201" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <property final="false" static="false" visibility="protected" line="213" namespace="global" package="Default">
+        <name>$trustForwarded</name>
+        <default>false</default>
+        <docblock line="208">
+          <description>Indicates if we trust HTTP_X_FORWARDED_* headers.</description>
+          <long-description/>
+          <tag line="208" name="var" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="225" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="215">
+          <description>Initialize a Facebook Application.</description>
+          <long-description>&lt;p&gt;The configuration:
+- appId: the application ID
+- secret: the application secret
+- fileUpload: (optional) boolean indicating if file uploads are enabled&lt;/p&gt;</long-description>
+          <tag line="215" name="param" description="The application configuration" type="array" variable="$config">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="225">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="246" package="Default">
+        <name>setAppId</name>
+        <full_name>setAppId</full_name>
+        <docblock line="240">
+          <description>Set the Application ID.</description>
+          <long-description/>
+          <tag line="240" name="param" description="The Application ID" type="string" variable="$appId">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="240" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="246">
+          <name>$appId</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="256" package="Default">
+        <name>getAppId</name>
+        <full_name>getAppId</full_name>
+        <docblock line="251">
+          <description>Get the Application ID.</description>
+          <long-description/>
+          <tag line="251" name="return" description="the Application ID" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="267" package="Default">
+        <name>setApiSecret</name>
+        <full_name>setApiSecret</full_name>
+        <docblock line="260">
+          <description>Set the App Secret.</description>
+          <long-description/>
+          <tag line="260" name="param" description="The App Secret" type="string" variable="$apiSecret">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="260" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+          <tag line="260" name="deprecated" description=""/>
+        </docblock>
+        <argument line="267">
+          <name>$apiSecret</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="278" package="Default">
+        <name>setAppSecret</name>
+        <full_name>setAppSecret</full_name>
+        <docblock line="272">
+          <description>Set the App Secret.</description>
+          <long-description/>
+          <tag line="272" name="param" description="The App Secret" type="string" variable="$appSecret">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="272" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="278">
+          <name>$appSecret</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="289" package="Default">
+        <name>getApiSecret</name>
+        <full_name>getApiSecret</full_name>
+        <docblock line="283">
+          <description>Get the App Secret.</description>
+          <long-description/>
+          <tag line="283" name="return" description="the App Secret" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="283" name="deprecated" description=""/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="298" package="Default">
+        <name>getAppSecret</name>
+        <full_name>getAppSecret</full_name>
+        <docblock line="293">
+          <description>Get the App Secret.</description>
+          <long-description/>
+          <tag line="293" name="return" description="the App Secret" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="308" package="Default">
+        <name>setFileUploadSupport</name>
+        <full_name>setFileUploadSupport</full_name>
+        <docblock line="302">
+          <description>Set the file upload support status.</description>
+          <long-description/>
+          <tag line="302" name="param" description="The file upload support status." type="boolean" variable="$fileUploadSupport">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="302" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="308">
+          <name>$fileUploadSupport</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="318" package="Default">
+        <name>getFileUploadSupport</name>
+        <full_name>getFileUploadSupport</full_name>
+        <docblock line="313">
+          <description>Get the file upload support status.</description>
+          <long-description/>
+          <tag line="313" name="return" description="true if and only if the server supports file upload." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="329" package="Default">
+        <name>useFileUploadSupport</name>
+        <full_name>useFileUploadSupport</full_name>
+        <docblock line="322">
+          <description>DEPRECATED! Please use getFileUploadSupport instead.</description>
+          <long-description>&lt;p&gt;Get the file upload support status.&lt;/p&gt;</long-description>
+          <tag line="322" name="return" description="true if and only if the server supports file upload." type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="341" package="Default">
+        <name>setAccessToken</name>
+        <full_name>setAccessToken</full_name>
+        <docblock line="333">
+          <description>Sets the access token for api calls.</description>
+          <long-description>&lt;p&gt;Use this if you get
+your access token by other means and just want the SDK
+to use it.&lt;/p&gt;</long-description>
+          <tag line="333" name="param" description="an access token." type="string" variable="$access_token">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="333" name="return" description="" type="\BaseFacebook">
+            <type by_reference="false">\BaseFacebook</type>
+          </tag>
+        </docblock>
+        <argument line="341">
+          <name>$access_token</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="351" package="Default">
+        <name>setExtendedAccessToken</name>
+        <full_name>setExtendedAccessToken</full_name>
+        <docblock line="346">
+          <description>Extend an access token, while removing the short-lived token that might
+have been generated via client-side flow.</description>
+          <long-description>&lt;p&gt;Thanks to http://bit.ly/b0Pt0H
+for the workaround.&lt;/p&gt;</long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="398" package="Default">
+        <name>getAccessToken</name>
+        <full_name>getAccessToken</full_name>
+        <docblock line="389">
+          <description>Determines the access token that should be used for API calls.</description>
+          <long-description>&lt;p&gt;The first time this is called, $this-&gt;accessToken is set equal
+to either a valid user access token, or it's set to the application
+access token if a valid user access token wasn't available.  Subsequent
+calls return whatever the first call returned.&lt;/p&gt;</long-description>
+          <tag line="389" name="return" description="The access token" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="426" package="Default">
+        <name>getUserAccessToken</name>
+        <full_name>getUserAccessToken</full_name>
+        <docblock line="416">
+          <description>Determines and returns the user access token, first using
+the signed request if present, and then falling back on
+the authorization code if present.</description>
+          <long-description>&lt;p&gt;The intent is to
+return a valid user access token, or false if one is determined
+to not be available.&lt;/p&gt;</long-description>
+          <tag line="416" name="return" description="A valid user access token, or false if one&#10;               could not be determined." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="489" package="Default">
+        <name>getSignedRequest</name>
+        <full_name>getSignedRequest</full_name>
+        <docblock line="483">
+          <description>Retrieve the signed request, either from a request parameter or,
+if not present, from a cookie.</description>
+          <long-description/>
+          <tag line="483" name="return" description="the signed request, if available, or null otherwise." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="508" package="Default">
+        <name>getUser</name>
+        <full_name>getUser</full_name>
+        <docblock line="502">
+          <description>Get the UID of the connected user, or 0
+if the Facebook user is not connected.</description>
+          <long-description/>
+          <tag line="502" name="return" description="the UID if available." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="525" package="Default">
+        <name>getUserFromAvailableData</name>
+        <full_name>getUserFromAvailableData</full_name>
+        <docblock line="517">
+          <description>Determines the connected user by first examining any signed
+requests, then considering an authorization code, and then
+falling back to any persistent store storing the user.</description>
+          <long-description/>
+          <tag line="517" name="return" description="The id of the connected Facebook user,&#10;                or 0 if no such user exists." type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="579" package="Default">
+        <name>getLoginUrl</name>
+        <full_name>getLoginUrl</full_name>
+        <docblock line="567">
+          <description>Get a Login URL for use with redirects.</description>
+          <long-description>&lt;p&gt;By default, full page redirect is
+assumed. If you are using the generated URL with a window.open() call in
+JavaScript, you can pass in display=popup as part of the $params.&lt;/p&gt;
+
+&lt;p&gt;The parameters:
+- redirect_uri: the url to go to after a successful login
+- scope: comma separated list of requested extended perms&lt;/p&gt;</long-description>
+          <tag line="567" name="param" description="Provide custom parameters" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="567" name="return" description="The URL for the login flow" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="579">
+          <name>$params</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="608" package="Default">
+        <name>getLogoutUrl</name>
+        <full_name>getLogoutUrl</full_name>
+        <docblock line="599">
+          <description>Get a Logout URL suitable for use with redirects.</description>
+          <long-description>&lt;p&gt;The parameters:
+- next: the url to go to after a successful logout&lt;/p&gt;</long-description>
+          <tag line="599" name="param" description="Provide custom parameters" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="599" name="return" description="The URL for the logout flow" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="608">
+          <name>$params</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="630" package="Default">
+        <name>getLoginStatusUrl</name>
+        <full_name>getLoginStatusUrl</full_name>
+        <docblock line="619">
+          <description>Get a login status URL to fetch the status from Facebook.</description>
+          <long-description>&lt;p&gt;The parameters:
+- ok_session: the URL to go to if a session is found
+- no_session: the URL to go to if the user is not connected
+- no_user: the URL to go to if the user is not signed into facebook&lt;/p&gt;</long-description>
+          <tag line="619" name="param" description="Provide custom parameters" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="619" name="return" description="The URL for the logout flow" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="630">
+          <name>$params</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="649" package="Default">
+        <name>api</name>
+        <full_name>api</full_name>
+        <docblock line="644">
+          <description>Make an API call.</description>
+          <long-description/>
+          <tag line="644" name="return" description="The decoded response" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="667" package="Default">
+        <name>getSignedRequestCookieName</name>
+        <full_name>getSignedRequestCookieName</full_name>
+        <docblock line="658">
+          <description>Constructs and returns the name of the cookie that
+potentially houses the signed request for the app user.</description>
+          <long-description>&lt;p&gt;The cookie is not set by the BaseFacebook class, but
+it may be set by the JavaScript SDK.&lt;/p&gt;</long-description>
+          <tag line="658" name="return" description="the name of the cookie that would house&#10;        the signed request value." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="678" package="Default">
+        <name>getMetadataCookieName</name>
+        <full_name>getMetadataCookieName</full_name>
+        <docblock line="671">
+          <description>Constructs and returns the name of the coookie that potentially contain
+metadata.</description>
+          <long-description>&lt;p&gt;The cookie is not set by the BaseFacebook class, but it may be
+set by the JavaScript SDK.&lt;/p&gt;</long-description>
+          <tag line="671" name="return" description="the name of the cookie that would house metadata." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="690" package="Default">
+        <name>getCode</name>
+        <full_name>getCode</full_name>
+        <docblock line="682">
+          <description>Get the authorization code from the query parameters, if it exists,
+and otherwise return false to signal no authorization code was
+discoverable.</description>
+          <long-description/>
+          <tag line="682" name="return" description="The authorization code, or false if the authorization&#10;              code could not be determined." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="719" package="Default">
+        <name>getUserFromAccessToken</name>
+        <full_name>getUserFromAccessToken</full_name>
+        <docblock line="709">
+          <description>Retrieves the UID with the understanding that
+$this-&gt;accessToken has already been set and is
+seemingly legitimate.</description>
+          <long-description>&lt;p&gt;It relies on Facebook's Graph API
+to retrieve user information and then extract
+the user ID.&lt;/p&gt;</long-description>
+          <tag line="709" name="return" description="Returns the UID of the Facebook user, or 0&#10;                if the Facebook user could not be determined." type="integer">
+            <type by_reference="false">integer</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="735" package="Default">
+        <name>getApplicationAccessToken</name>
+        <full_name>getApplicationAccessToken</full_name>
+        <docblock line="728">
+          <description>Returns the access token that should be used for logged out
+users when no authorization code is available.</description>
+          <long-description/>
+          <tag line="728" name="return" description="The application access token, useful for gathering&#10;               public information about users and applications." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="744" package="Default">
+        <name>establishCSRFTokenState</name>
+        <full_name>establishCSRFTokenState</full_name>
+        <docblock line="739">
+          <description>Lays down a CSRF state token for this process.</description>
+          <long-description/>
+          <tag line="739" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="763" package="Default">
+        <name>getAccessTokenFromCode</name>
+        <full_name>getAccessTokenFromCode</full_name>
+        <docblock line="751">
+          <description>Retrieves an access token for the given authorization code
+(previously generated from www.facebook.com on behalf of
+a specific user).</description>
+          <long-description>&lt;p&gt;The authorization code is sent to graph.facebook.com
+and a legitimate access token is generated provided the access token
+and the user for which it was generated all match, and the user is
+either logged in to Facebook or has granted an offline access permission.&lt;/p&gt;</long-description>
+          <tag line="751" name="param" description="An authorization code." type="string" variable="$code">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="751" name="return" description="An access token exchanged for the authorization code, or&#10;              false if an access token could not be generated." type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="763">
+          <name>$code</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="763">
+          <name>$redirect_uri</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="809" package="Default">
+        <name>_restserver</name>
+        <full_name>_restserver</full_name>
+        <docblock line="801">
+          <description>Invoke the old restserver.php endpoint.</description>
+          <long-description/>
+          <tag line="801" name="param" description="Method call object" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="801" name="return" description="The decoded response object" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="801" name="throws" description="" type="\FacebookApiException">
+            <type by_reference="false">\FacebookApiException</type>
+          </tag>
+        </docblock>
+        <argument line="809">
+          <name>$params</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="843" package="Default">
+        <name>isVideoPost</name>
+        <full_name>isVideoPost</full_name>
+        <docblock line="835">
+          <description>Return true if this is video post.</description>
+          <long-description/>
+          <tag line="835" name="param" description="The path" type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="835" name="param" description="The http method (default 'GET')" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="835" name="return" description="true if this is video post" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="843">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="843">
+          <name>$method</name>
+          <default>'GET'</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="860" package="Default">
+        <name>_graph</name>
+        <full_name>_graph</full_name>
+        <docblock line="850">
+          <description>Invoke the Graph API.</description>
+          <long-description/>
+          <tag line="850" name="param" description="The path (required)" type="string" variable="$path">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="850" name="param" description="The http method (default 'GET')" type="string" variable="$method">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="850" name="param" description="The query/post data" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="850" name="return" description="The decoded response object" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+          <tag line="850" name="throws" description="" type="\FacebookApiException">
+            <type by_reference="false">\FacebookApiException</type>
+          </tag>
+        </docblock>
+        <argument line="860">
+          <name>$path</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="860">
+          <name>$method</name>
+          <default>'GET'</default>
+          <type/>
+        </argument>
+        <argument line="860">
+          <name>$params</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="897" package="Default">
+        <name>_oauthRequest</name>
+        <full_name>_oauthRequest</full_name>
+        <docblock line="888">
+          <description>Make a OAuth Request.</description>
+          <long-description/>
+          <tag line="888" name="param" description="The path (required)" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="888" name="param" description="The query/post data" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="888" name="return" description="The decoded response object" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="888" name="throws" description="" type="\FacebookApiException">
+            <type by_reference="false">\FacebookApiException</type>
+          </tag>
+        </docblock>
+        <argument line="897">
+          <name>$url</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="897">
+          <name>$params</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="923" package="Default">
+        <name>makeRequest</name>
+        <full_name>makeRequest</full_name>
+        <docblock line="912">
+          <description>Makes an HTTP request.</description>
+          <long-description>&lt;p&gt;This method can be overridden by subclasses if
+developers want to do fancier things or use something other than curl to
+make the request.&lt;/p&gt;</long-description>
+          <tag line="912" name="param" description="The URL to make the request to" type="string" variable="$url">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="912" name="param" description="The parameters to use for the POST body" type="array" variable="$params">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="912" name="param" description="Initialized curl handle" type="\CurlHandler" variable="$ch">
+            <type by_reference="false">\CurlHandler</type>
+          </tag>
+          <tag line="912" name="return" description="The response text" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="923">
+          <name>$url</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="923">
+          <name>$params</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="923">
+          <name>$ch</name>
+          <default>null</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="997" package="Default">
+        <name>parseSignedRequest</name>
+        <full_name>parseSignedRequest</full_name>
+        <docblock line="991">
+          <description>Parses a signed_request and validates the signature.</description>
+          <long-description/>
+          <tag line="991" name="param" description="A signed token" type="string" variable="$signed_request">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="991" name="return" description="The payload inside it or null if the sig is wrong" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="997">
+          <name>$signed_request</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1027" package="Default">
+        <name>makeSignedRequest</name>
+        <full_name>makeSignedRequest</full_name>
+        <docblock line="1021">
+          <description>Makes a signed_request blob using the given data.</description>
+          <long-description/>
+          <tag line="1021" name="param" description="The data array." type="array" variable="$data">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="1021" name="return" description="The signed request." type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1027">
+          <name>$data</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1047" package="Default">
+        <name>getApiUrl</name>
+        <full_name>getApiUrl</full_name>
+        <docblock line="1041">
+          <description>Build the URL for api given parameters.</description>
+          <long-description/>
+          <tag line="1041" name="param" description="String the method name." type="\" variable="$method"/>
+          <tag line="1041" name="return" description="The URL for the given parameters" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1047">
+          <name>$method</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1127" package="Default">
+        <name>getUrl</name>
+        <full_name>getUrl</full_name>
+        <docblock line="1118">
+          <description>Build the URL for given domain alias, path and parameters.</description>
+          <long-description/>
+          <tag line="1118" name="param" description="string The name of the domain" type="\" variable="$name"/>
+          <tag line="1118" name="param" description="string Optional path (without a leading slash)" type="\" variable="$path"/>
+          <tag line="1118" name="param" description="array Optional query parameters" type="\" variable="$params"/>
+          <tag line="1118" name="return" description="The URL for the given parameters" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1127">
+          <name>$name</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="1127">
+          <name>$path</name>
+          <default>''</default>
+          <type/>
+        </argument>
+        <argument line="1127">
+          <name>$params</name>
+          <default>array()</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1142" package="Default">
+        <name>getHttpHost</name>
+        <full_name>getHttpHost</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1149" package="Default">
+        <name>getHttpProtocol</name>
+        <full_name>getHttpProtocol</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1172" package="Default">
+        <name>getBaseDomain</name>
+        <full_name>getBaseDomain</full_name>
+        <docblock line="1169">
+          <description>Get the base domain used for the cookie.</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1191" package="Default">
+        <name>getCurrentUrl</name>
+        <full_name>getCurrentUrl</full_name>
+        <docblock line="1183">
+          <description>Returns the Current URL, stripping it of known FB parameters that should
+not persist.</description>
+          <long-description/>
+          <tag line="1183" name="return" description="The current URL" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1235" package="Default">
+        <name>shouldRetainParam</name>
+        <full_name>shouldRetainParam</full_name>
+        <docblock line="1224">
+          <description>Returns true if and only if the key or key/value pair should
+be retained as part of the query string.</description>
+          <long-description>&lt;p&gt;This amounts to
+a brute-force search of the very small list of Facebook-specific
+params that should be stripped out.&lt;/p&gt;</long-description>
+          <tag line="1224" name="param" description="A key or key/value pair within a URL's query (e.g.&#10;                    'foo=a', 'foo=', or 'foo'." type="string" variable="$param">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1224" name="return" description="" type="boolean">
+            <type by_reference="false">boolean</type>
+          </tag>
+        </docblock>
+        <argument line="1235">
+          <name>$param</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1253" package="Default">
+        <name>throwAPIException</name>
+        <full_name>throwAPIException</full_name>
+        <docblock line="1245">
+          <description>Analyzes the supplied result to see if it was thrown
+because the access token is no longer valid.</description>
+          <long-description>&lt;p&gt;If that is
+the case, then we destroy the session.&lt;/p&gt;</long-description>
+          <tag line="1245" name="param" description="array A record storing the error message returned&#10;                     by a failed API call." type="\" variable="$result"/>
+        </docblock>
+        <argument line="1253">
+          <name>$result</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1281" package="Default">
+        <name>errorLog</name>
+        <full_name>errorLog</full_name>
+        <docblock line="1276">
+          <description>Prints to the error log if you aren't in command line mode.</description>
+          <long-description/>
+          <tag line="1276" name="param" description="Log message" type="string" variable="$msg">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1281">
+          <name>$msg</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1302" package="Default">
+        <name>base64UrlDecode</name>
+        <full_name>base64UrlDecode</full_name>
+        <docblock line="1292">
+          <description>Base64 encoding that doesn't need to be urlencode()ed.</description>
+          <long-description>&lt;p&gt;Exactly the same as base64_encode except it uses
+  - instead of +
+  _ instead of /
+  No padded =&lt;/p&gt;</long-description>
+          <tag line="1292" name="param" description="base64UrlEncoded string" type="string" variable="$input">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1292" name="return" description="" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1302">
+          <name>$input</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1315" package="Default">
+        <name>base64UrlEncode</name>
+        <full_name>base64UrlEncode</full_name>
+        <docblock line="1306">
+          <description>Base64 encoding that doesn't need to be urlencode()ed.</description>
+          <long-description>&lt;p&gt;Exactly the same as base64_encode except it uses
+  - instead of +
+  _ instead of /&lt;/p&gt;</long-description>
+          <tag line="1306" name="param" description="string" type="string" variable="$input">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1306" name="return" description="base64Url encoded string" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+        <argument line="1315">
+          <name>$input</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="1324" package="Default">
+        <name>destroySession</name>
+        <full_name>destroySession</full_name>
+        <docblock line="1321">
+          <description>Destroy the current session</description>
+          <long-description/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="1355" package="Default">
+        <name>getMetadataCookie</name>
+        <full_name>getMetadataCookie</full_name>
+        <docblock line="1350">
+          <description>Parses the metadata cookie that our Javascript API set</description>
+          <long-description/>
+          <tag line="1350" name="return" description="array mapping key to value" type="\an">
+            <type by_reference="false">\an</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1381" package="Default">
+        <name>isAllowedDomain</name>
+        <full_name>isAllowedDomain</full_name>
+        <argument line="1381">
+          <name>$big</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="1381">
+          <name>$small</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="true" visibility="protected" namespace="global" line="1388" package="Default">
+        <name>endsWith</name>
+        <full_name>endsWith</full_name>
+        <argument line="1388">
+          <name>$big</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="1388">
+          <name>$small</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1415" package="Default">
+        <name>setPersistentData</name>
+        <full_name>setPersistentData</full_name>
+        <docblock line="1406">
+          <description>Stores the given ($key, $value) pair, so that future calls to
+getPersistentData($key) return $value.</description>
+          <long-description>&lt;p&gt;This call may be in another request.&lt;/p&gt;</long-description>
+          <tag line="1406" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1406" name="param" description="" type="array" variable="$value">
+            <type by_reference="false">array</type>
+          </tag>
+          <tag line="1406" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="1415">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="1415">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1425" package="Default">
+        <name>getPersistentData</name>
+        <full_name>getPersistentData</full_name>
+        <docblock line="1417">
+          <description>Get the data for $key, persisted by BaseFacebook::setPersistentData()</description>
+          <long-description/>
+          <tag line="1417" name="param" description="The key of the data to retrieve" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1417" name="param" description="The default value to return if $key is not found" type="boolean" variable="$default">
+            <type by_reference="false">boolean</type>
+          </tag>
+          <tag line="1417" name="return" description="" type="mixed">
+            <type by_reference="false">mixed</type>
+          </tag>
+        </docblock>
+        <argument line="1425">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="1425">
+          <name>$default</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1433" package="Default">
+        <name>clearPersistentData</name>
+        <full_name>clearPersistentData</full_name>
+        <docblock line="1427">
+          <description>Clear the data with $key from the persistent storage</description>
+          <long-description/>
+          <tag line="1427" name="param" description="" type="string" variable="$key">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="1427" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="1433">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="true" static="false" visibility="protected" namespace="global" line="1440" package="Default">
+        <name>clearAllPersistentData</name>
+        <full_name>clearAllPersistentData</full_name>
+        <docblock line="1435">
+          <description>Clear all data from the persistent storage</description>
+          <long-description/>
+          <tag line="1435" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="751" code="50015">Argument $redirect_uri is missing from the Docblock of getAccessTokenFromCode()</error>
+      <error line="1142" code="50010">No DocBlock was found for method getHttpHost()</error>
+      <error line="1149" code="50010">No DocBlock was found for method getHttpProtocol()</error>
+      <error line="1381" code="50010">No DocBlock was found for method isAllowedDomain()</error>
+      <error line="1388" code="50010">No DocBlock was found for method endsWith()</error>
+    </parse_markers>
+  </file>
+  <file path="controllers/FacebookAPI/facebook.php" hash="531d1f4572f8809d503519464e231570" package="Default">
+    <include line="18" type="Require Once" package="Default">
+      <name>base_facebook.php</name>
+      <docblock line="2">
+        <description>Copyright 2011 Facebook, Inc.</description>
+        <long-description>&lt;p&gt;Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://www.apache.org/licenses/LICENSE-2.0
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.&lt;/p&gt;</long-description>
+      </docblock>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="24" package="Default">
+      <extends>\BaseFacebook</extends>
+      <name>Facebook</name>
+      <full_name>\Facebook</full_name>
+      <docblock line="20">
+        <description>Extends the BaseFacebook class with the intent of using
+PHP sessions to store user ids and access tokens.</description>
+        <long-description/>
+      </docblock>
+      <constant namespace="global" line="26" package="Default">
+        <name>FBSS_COOKIE_NAME</name>
+        <full_name>FBSS_COOKIE_NAME</full_name>
+        <value>'fbss'</value>
+      </constant>
+      <constant namespace="global" line="30" package="Default">
+        <name>FBSS_COOKIE_EXPIRE</name>
+        <full_name>FBSS_COOKIE_EXPIRE</full_name>
+        <value>31556926</value>
+      </constant>
+      <property final="false" static="false" visibility="protected" line="33" namespace="global" package="Default">
+        <name>$sharedSessionID</name>
+        <default/>
+      </property>
+      <property final="false" static="true" visibility="protected" line="57" namespace="global" package="Default">
+        <name>$kSupportedKeys</name>
+        <default>array('state', 'code', 'access_token', 'user_id')</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="47" package="Default">
+        <name>__construct</name>
+        <full_name>__construct</full_name>
+        <docblock line="35">
+          <description>Identical to the parent constructor, except that
+we start a PHP session to store the user ID and
+access token if during the course of execution
+we discover them.</description>
+          <long-description/>
+          <tag line="35" name="param" description="the application configuration. Additionally&#10;accepts &quot;sharedSession&quot; as a boolean to turn on a secondary&#10;cookie for environments with a shared session (that is, your app&#10;shares the domain with other apps)." type="Array" variable="$config">
+            <type by_reference="false">Array</type>
+          </tag>
+          <tag line="35" name="see" description="in facebook.php" refers="\BaseFacebook::__construct"/>
+        </docblock>
+        <argument line="47">
+          <name>$config</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="60" package="Default">
+        <name>initSharedSession</name>
+        <full_name>initSharedSession</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="102" package="Default">
+        <name>setPersistentData</name>
+        <full_name>setPersistentData</full_name>
+        <docblock line="96">
+          <description>Provides the implementations of the inherited abstract
+methods.</description>
+          <long-description>&lt;p&gt;The implementation uses PHP sessions to maintain
+a store for authorization codes, user ids, CSRF states, and
+access tokens.&lt;/p&gt;</long-description>
+        </docblock>
+        <argument line="102">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="102">
+          <name>$value</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="112" package="Default">
+        <name>getPersistentData</name>
+        <full_name>getPersistentData</full_name>
+        <argument line="112">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="112">
+          <name>$default</name>
+          <default>false</default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="123" package="Default">
+        <name>clearPersistentData</name>
+        <full_name>clearPersistentData</full_name>
+        <argument line="123">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="133" package="Default">
+        <name>clearAllPersistentData</name>
+        <full_name>clearAllPersistentData</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="142" package="Default">
+        <name>deleteSharedSessionCookie</name>
+        <full_name>deleteSharedSessionCookie</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="149" package="Default">
+        <name>getSharedSessionCookieName</name>
+        <full_name>getSharedSessionCookieName</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="153" package="Default">
+        <name>constructSessionVariableName</name>
+        <full_name>constructSessionVariableName</full_name>
+        <argument line="153">
+          <name>$key</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controllers/FacebookAPI/facebook.php</error>
+      <error line="33" code="50018">No DocBlock was found for property $sharedSessionID</error>
+      <error line="57" code="50018">No DocBlock was found for property $kSupportedKeys</error>
+      <error line="60" code="50010">No DocBlock was found for method initSharedSession()</error>
+      <error line="96" code="50015">Argument $key is missing from the Docblock of setPersistentData()</error>
+      <error line="96" code="50015">Argument $value is missing from the Docblock of setPersistentData()</error>
+      <error line="112" code="50010">No DocBlock was found for method getPersistentData()</error>
+      <error line="123" code="50010">No DocBlock was found for method clearPersistentData()</error>
+      <error line="133" code="50010">No DocBlock was found for method clearAllPersistentData()</error>
+      <error line="142" code="50010">No DocBlock was found for method deleteSharedSessionCookie()</error>
+      <error line="149" code="50010">No DocBlock was found for method getSharedSessionCookieName()</error>
+      <error line="153" code="50010">No DocBlock was found for method constructSessionVariableName()</error>
+    </parse_markers>
+  </file>
+  <file path="controllers/IndexController.php" hash="fa0842594fe80f5b5888ff6bccd4089a" package="Default">
+    <docblock line="2">
+      <description>Diese Datei beinhaltet den IndexController</description>
+      <long-description></long-description>
+    </docblock>
+    <include line="9" type="Require Once" package="Default">
+      <name>FacebookAPI/facebook.php</name>
+      <docblock line="6">
+        <description>Laedt die Klasse Facebook</description>
+        <long-description></long-description>
+      </docblock>
+    </include>
+    <class final="false" abstract="false" namespace="global" line="16" package="Uniride\Controllers">
+      <extends>\Zend_Controller_Action</extends>
+      <name>IndexController</name>
+      <full_name>\IndexController</full_name>
+      <docblock line="11">
+        <description></description>
+        <long-description></long-description>
+        <tag line="11" name="package" description="Uniride\Controllers"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="25" package="Uniride\Controllers">
+        <name>init</name>
+        <full_name>init</full_name>
+        <docblock line="18">
+          <description>Initialisiert die Klasse</description>
+          <long-description>&lt;p&gt;Laedt die Uebersetzungen und die Session-Variablen&lt;/p&gt;</long-description>
+          <tag line="18" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="38" package="Uniride\Controllers">
+        <name>indexAction</name>
+        <full_name>indexAction</full_name>
+        <docblock line="30">
+          <description>Fachlogik für die Index-Funktion</description>
+          <long-description>&lt;p&gt;Zeigt die Userprofil-Daten an&lt;/p&gt;</long-description>
+          <tag line="30" name="link" description="http://www.uniride.de" link="http://www.uniride.de"/>
+          <tag line="30" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="90" package="Uniride\Controllers">
+        <name>accountAction</name>
+        <full_name>accountAction</full_name>
+        <docblock line="85">
+          <description>Fachlogik für die Account-Funktion</description>
+          <long-description></long-description>
+          <tag line="85" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <critical line="11" code="50005">No short description for class \IndexController</critical>
+    </parse_markers>
+  </file>
+  <file path="controllers/AccountController.php" hash="1db8da50a87e934d6f5367f2d22cc39c" package="Default">
+    <class final="false" abstract="false" namespace="global" line="9" package="Default">
+      <extends>\Zend_Controller_Action</extends>
+      <name>AccountController</name>
+      <full_name>\AccountController</full_name>
+      <docblock line="3">
+        <description/>
+        <long-description/>
+        <tag line="3" name="author" description="MFZ"/>
+        <tag line="3" name="version" description="1.0"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="Default">
+        <name>init</name>
+        <full_name>init</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>indexAction</name>
+        <full_name>indexAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="33" package="Default">
+        <name>addcarAction</name>
+        <full_name>addcarAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="Default">
+        <name>deletecarAction</name>
+        <full_name>deletecarAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="65" package="Default">
+        <name>editcarAction</name>
+        <full_name>editcarAction</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="91" package="Default">
+        <name>getAddCarForm</name>
+        <full_name>getAddCarForm</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="private" namespace="global" line="99" package="Default">
+        <name>getEditCarForm</name>
+        <full_name>getEditCarForm</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controllers/AccountController.php</error>
+      <critical line="3" code="50005">No short description for class \AccountController</critical>
+      <error line="12" code="50010">No DocBlock was found for method init()</error>
+      <error line="17" code="50010">No DocBlock was found for method indexAction()</error>
+      <error line="33" code="50010">No DocBlock was found for method addcarAction()</error>
+      <error line="57" code="50010">No DocBlock was found for method deletecarAction()</error>
+      <error line="65" code="50010">No DocBlock was found for method editcarAction()</error>
+      <error line="91" code="50010">No DocBlock was found for method getAddCarForm()</error>
+      <error line="99" code="50010">No DocBlock was found for method getEditCarForm()</error>
+    </parse_markers>
+  </file>
+  <file path="controllers/CalendarController.php" hash="71b1866ef017a8ba57f1a9c3444bebe1" package="Default">
+    <class final="false" abstract="false" namespace="global" line="9" package="Default">
+      <extends>\Zend_Controller_Action</extends>
+      <name>CalendarController</name>
+      <full_name>\CalendarController</full_name>
+      <docblock line="3">
+        <description/>
+        <long-description/>
+        <tag line="3" name="author" description=""/>
+        <tag line="3" name="version" description="1.0"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="11" package="Default">
+        <name>init</name>
+        <full_name>init</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="17" package="Default">
+        <name>indexAction</name>
+        <full_name>indexAction</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file controllers/CalendarController.php</error>
+      <critical line="3" code="50005">No short description for class \CalendarController</critical>
+      <error line="11" code="50010">No DocBlock was found for method init()</error>
+      <error line="17" code="50010">No DocBlock was found for method indexAction()</error>
+    </parse_markers>
+  </file>
+  <file path="models/Ride/DbDestinations.php" hash="32fe7af1fcedab11e64e92c91b7e8329" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Zend_Db_Table_Abstract</extends>
+      <name>Model_Ride_DbDestinations</name>
+      <full_name>\Model_Ride_DbDestinations</full_name>
+      <property final="false" static="false" visibility="protected" line="5" namespace="global" package="Default">
+        <name>$_name</name>
+        <default>'destinations'</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>getDestinations</name>
+        <full_name>getDestinations</full_name>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="12" package="Default">
+        <name>getDestinationByKoords</name>
+        <full_name>getDestinationByKoords</full_name>
+        <argument line="12">
+          <name>$lat</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="12">
+          <name>$lng</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file models/Ride/DbDestinations.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Model_Ride_DbDestinations</error>
+      <error line="5" code="50018">No DocBlock was found for property $_name</error>
+      <error line="7" code="50010">No DocBlock was found for method getDestinations()</error>
+      <error line="12" code="50010">No DocBlock was found for method getDestinationByKoords()</error>
+    </parse_markers>
+  </file>
+  <file path="models/Ride/DbRoutes.php" hash="1dae598b6e1c55ec1cb5a273ef46fe22" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Zend_Db_Table_Abstract</extends>
+      <name>Model_Ride_DbRoutes</name>
+      <full_name>\Model_Ride_DbRoutes</full_name>
+      <property final="false" static="false" visibility="protected" line="5" namespace="global" package="Default">
+        <name>$_name</name>
+        <default>'routes'</default>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="7" package="Default">
+        <name>saveRoute</name>
+        <full_name>saveRoute</full_name>
+        <argument line="7">
+          <name>$userId</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$distance</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$duration</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$destinationId</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$start</name>
+          <default/>
+          <type/>
+        </argument>
+        <argument line="7">
+          <name>$steps</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Default">
+        <name>getRoutesByUserId</name>
+        <full_name>getRoutesByUserId</full_name>
+        <argument line="36">
+          <name>$userId</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file models/Ride/DbRoutes.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Model_Ride_DbRoutes</error>
+      <error line="5" code="50018">No DocBlock was found for property $_name</error>
+      <error line="7" code="50010">No DocBlock was found for method saveRoute()</error>
+      <error line="36" code="50010">No DocBlock was found for method getRoutesByUserId()</error>
+    </parse_markers>
+  </file>
+  <file path="models/Index/DbAccount.php" hash="a188ae44a9a4688650084469876c74d8" package="Default">
+    <docblock line="2">
+      <description>Diese Datei beinhaltet das Model Index_DbAccount</description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="global" line="11" package="Uniride\Models\Index">
+      <extends>\Zend_Db_Table_Abstract</extends>
+      <name>Model_Index_DbAccount</name>
+      <full_name>\Model_Index_DbAccount</full_name>
+      <docblock line="6">
+        <description>Beinhaltet Funktionen zur Abfrage aus der Tabelle users</description>
+        <long-description></long-description>
+        <tag line="6" name="package" description="Uniride\Models\Index"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="16" namespace="global" package="Default">
+        <name>$_name</name>
+        <default>'users'</default>
+        <docblock line="13">
+          <description></description>
+          <long-description></long-description>
+          <tag line="13" name="var" description="Definiert die verwendete Tabelle" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="24" package="Uniride\Models\Index">
+        <name>checkIfUserExists</name>
+        <full_name>checkIfUserExists</full_name>
+        <docblock line="18">
+          <description>Ueberprueft ob zur facebookId breits ein interner User existiert</description>
+          <long-description></long-description>
+          <tag line="18" name="param" description="" type="int" variable="$facebookId">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="18" name="return" description="interne UserId or false" type="int|false">
+            <type by_reference="false">int</type>
+            <type by_reference="false">false</type>
+          </tag>
+        </docblock>
+        <argument line="24">
+          <name>$facebookId</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="40" package="Uniride\Models\Index">
+        <name>checkIfAccountExists</name>
+        <full_name>checkIfAccountExists</full_name>
+        <docblock line="34">
+          <description>Ueberprueft ob zur Emailadresse bereits ein interner User existiert</description>
+          <long-description></long-description>
+          <tag line="34" name="param" description="" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="34" name="return" description="interne UserId or false" type="int|false">
+            <type by_reference="false">int</type>
+            <type by_reference="false">false</type>
+          </tag>
+        </docblock>
+        <argument line="40">
+          <name>$email</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="57" package="Uniride\Models\Index">
+        <name>updateAccountWithFbId</name>
+        <full_name>updateAccountWithFbId</full_name>
+        <docblock line="50">
+          <description>Ergaenzt einen internen Account mit der facebookId</description>
+          <long-description></long-description>
+          <tag line="50" name="param" description="" type="int" variable="$u_Id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="50" name="param" description="" type="int" variable="$facebookId">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="50" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+        <argument line="57">
+          <name>$u_Id</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="57">
+          <name>$facebookId</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="72" package="Uniride\Models\Index">
+        <name>createAccount</name>
+        <full_name>createAccount</full_name>
+        <docblock line="62">
+          <description>Erstellt einen neuen internen Account</description>
+          <long-description></long-description>
+          <tag line="62" name="param" description="" type="string" variable="$firstName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="" type="string" variable="$lastName">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="" type="string" variable="$gender">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="" type="string" variable="$email">
+            <type by_reference="false">string</type>
+          </tag>
+          <tag line="62" name="param" description="FacebookId" type="int" variable="$id">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="62" name="return" description="" type="bool">
+            <type by_reference="false">bool</type>
+          </tag>
+        </docblock>
+        <argument line="72">
+          <name>$firstName</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="72">
+          <name>$lastName</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="72">
+          <name>$gender</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="72">
+          <name>$email</name>
+          <default></default>
+          <type/>
+        </argument>
+        <argument line="72">
+          <name>$id</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+  </file>
+  <file path="models/Account/DbCars.php" hash="b715e4fbee5af3256c4f929876b40fc2" package="Default">
+    <class final="false" abstract="false" namespace="global" line="8" package="Uniride\Models\Account">
+      <extends>\Zend_Db_Table_Abstract</extends>
+      <name>Model_Account_DbCars</name>
+      <full_name>\Model_Account_DbCars</full_name>
+      <docblock line="3">
+        <description>Beinhaltet Funktionen zur Abfrage aus der Tabelle cars</description>
+        <long-description/>
+        <tag line="3" name="package" description="Uniride\Models\Account"/>
+      </docblock>
+      <property final="false" static="false" visibility="protected" line="13" namespace="global" package="Default">
+        <name>$_name</name>
+        <default>'cars'</default>
+        <docblock line="10">
+          <description/>
+          <long-description/>
+          <tag line="10" name="var" description="Definiert die verwendete Tabelle" type="string">
+            <type by_reference="false">string</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="21" package="Uniride\Models\Account">
+        <name>getCarsByUserId</name>
+        <full_name>getCarsByUserId</full_name>
+        <docblock line="15">
+          <description>Gibt ein Array mit allen Autos eines Users zurück</description>
+          <long-description/>
+          <tag line="15" name="param" description="interne UserId" type="int" variable="$userId">
+            <type by_reference="false">int</type>
+          </tag>
+          <tag line="15" name="return" description="Array von Autos" type="array">
+            <type by_reference="false">array</type>
+          </tag>
+        </docblock>
+        <argument line="21">
+          <name>$userId</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="27" package="Uniride\Models\Account">
+        <name>addCar</name>
+        <full_name>addCar</full_name>
+        <argument line="27">
+          <name>$carData</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="36" package="Uniride\Models\Account">
+        <name>deleteCar</name>
+        <full_name>deleteCar</full_name>
+        <argument line="36">
+          <name>$carID</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="40" package="Uniride\Models\Account">
+        <name>getCarDataById</name>
+        <full_name>getCarDataById</full_name>
+        <argument line="40">
+          <name>$carID</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="45" package="Uniride\Models\Account">
+        <name>editCar</name>
+        <full_name>editCar</full_name>
+        <argument line="45">
+          <name>$carData</name>
+          <default/>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file models/Account/DbCars.php</error>
+      <error line="27" code="50010">No DocBlock was found for method addCar()</error>
+      <error line="36" code="50010">No DocBlock was found for method deleteCar()</error>
+      <error line="40" code="50010">No DocBlock was found for method getCarDataById()</error>
+      <error line="45" code="50010">No DocBlock was found for method editCar()</error>
+    </parse_markers>
+  </file>
+  <file path="forms/Account/EditCarForm.php" hash="8a851bbbeeda145511cf58bc2ee5633f" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Zend_Form</extends>
+      <name>Form_Account_EditCarForm</name>
+      <full_name>\Form_Account_EditCarForm</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>init</name>
+        <full_name>init</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file forms/Account/EditCarForm.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Form_Account_EditCarForm</error>
+      <error line="5" code="50010">No DocBlock was found for method init()</error>
+    </parse_markers>
+  </file>
+  <file path="forms/Account/AddCarForm.php" hash="6a63ed2619e73e5f547f7457ddb88e7b" package="Default">
+    <class final="false" abstract="false" namespace="global" line="3" package="Default">
+      <extends>\Zend_Form</extends>
+      <name>Form_Account_AddCarForm</name>
+      <full_name>\Form_Account_AddCarForm</full_name>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="global" line="5" package="Default">
+        <name>init</name>
+        <full_name>init</full_name>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file forms/Account/AddCarForm.php</error>
+      <error line="3" code="50000">No DocBlock was found for \Form_Account_AddCarForm</error>
+      <error line="5" code="50010">No DocBlock was found for method init()</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/calendar/index.phtml" hash="d50483c0551594459609a40c3865493d" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/calendar/index.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/ride/show.phtml" hash="e1152efa97e9ea392bb3d173eb2eb02a" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/ride/show.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/ride/index.phtml" hash="0529b967fcd80479f2f14c492f17c5b7" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/ride/index.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/ride/saveroute.phtml" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/ride/saveroute.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/error/error.phtml" hash="c770d277cb08d3110de8a9876426cc7b" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/error/error.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/account/editcar.phtml" hash="6475c4ad5888182c14e3d79f3ff2d3ec" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/account/editcar.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/account/deletecar.phtml" hash="d41d8cd98f00b204e9800998ecf8427e" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/account/deletecar.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/account/index.phtml" hash="f19f82c7d5a77358c4c14269be3beee4" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/account/index.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/account/addcar.phtml" hash="a0d85e20d819302341ada7f5e5d3dc6f" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/account/addcar.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="views/scripts/index/index.phtml" hash="411665bee780b45244b1bd8c41d62a85" package="Default">
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file views/scripts/index/index.phtml</error>
+    </parse_markers>
+  </file>
+  <file path="Bootstrap.php" hash="141dd60f89fdb898063b2fef40a31233" package="Default">
+    <class final="false" abstract="false" namespace="global" line="14" package="Default">
+      <extends>\Zend_Application_Bootstrap_Bootstrap</extends>
+      <name>Bootstrap</name>
+      <full_name>\Bootstrap</full_name>
+      <docblock line="4">
+        <description/>
+        <long-description/>
+        <tag line="4" name="author" description="p.stolz"/>
+        <tag line="4" name="version" description="1.0"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="22" package="Default">
+        <name>_initConfig</name>
+        <full_name>_initConfig</full_name>
+        <docblock line="16">
+          <description>Load Config File</description>
+          <long-description/>
+          <tag line="16" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="31" package="Default">
+        <name>_initAutoload</name>
+        <full_name>_initAutoload</full_name>
+        <docblock line="27">
+          <description>Initialize Zend Autoload</description>
+          <long-description/>
+          <tag line="27" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="40" package="Default">
+        <name>_initResourceLoader</name>
+        <full_name>_initResourceLoader</full_name>
+        <docblock line="36">
+          <description>Initialize Zend Resource Loader</description>
+          <long-description/>
+          <tag line="36" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="49" package="Default">
+        <name>_initRouting</name>
+        <full_name>_initRouting</full_name>
+        <docblock line="45">
+          <description>Initialize Zend Routing</description>
+          <long-description/>
+          <tag line="45" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="68" package="Default">
+        <name>_initDatabase</name>
+        <full_name>_initDatabase</full_name>
+        <docblock line="64">
+          <description>Initialize Database Connection</description>
+          <long-description/>
+          <tag line="64" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="80" package="Default">
+        <name>_initSession</name>
+        <full_name>_initSession</full_name>
+        <docblock line="76">
+          <description>Initialize Zend Session</description>
+          <long-description/>
+          <tag line="76" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="100" package="Default">
+        <name>_initLayout</name>
+        <full_name>_initLayout</full_name>
+        <docblock line="96">
+          <description>Initialize Zend Layout</description>
+          <long-description/>
+          <tag line="96" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="119" package="Default">
+        <name>_initMultiLanguage</name>
+        <full_name>_initMultiLanguage</full_name>
+        <docblock line="115">
+          <description>Initialize Language Plugin</description>
+          <long-description/>
+          <tag line="115" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="global" line="128" package="Default">
+        <name>_initNavigation</name>
+        <full_name>_initNavigation</full_name>
+        <docblock line="124">
+          <description>Initialize Navigation</description>
+          <long-description/>
+          <tag line="124" name="return" description="" type="void">
+            <type by_reference="false">void</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="50007">No page-level DocBlock was found in file Bootstrap.php</error>
+      <critical line="4" code="50005">No short description for class \Bootstrap</critical>
+    </parse_markers>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="Uniride" full_name="Uniride">
+    <package name="Controllers" full_name="Uniride\Controllers"/>
+    <package name="Models" full_name="Uniride\Models">
+      <package name="Account" full_name="Uniride\Models\Account"/>
+      <package name="Index" full_name="Uniride\Models\Index"/>
+    </package>
+  </package>
+  <package name="Zend" full_name="Zend">
+    <package name="Cloud" full_name="Zend\Cloud">
+      <package name="examples" full_name="Zend\Cloud\examples"/>
+    </package>
+  </package>
+  <namespace name="global" full_name="global"/>
+  <marker count="0">todo</marker>
+  <marker count="0">fixme</marker>
+  <deprecated count="2"/>
+</project>

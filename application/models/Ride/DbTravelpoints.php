@@ -58,6 +58,33 @@ class Model_Ride_DbTravelpoints extends Zend_Db_Table_Abstract
 	}
 	
 	/**
+	 * Holt alle Travelpoints, die zeitlich im Rahmen liegen
+	 * 
+	 * @return array Array mit zeitlich relevanten Travelpoints
+	 */
+	public function getRelevantTravelpointsByDate($date) {
+
+		$db = Zend_Registry::get('db');
+		$select=$db->select();
+		$select->from(
+				array("rq" => "routerequests"),
+				array(
+						"tp.*"
+				)
+		);
+		$select->join(array("tp" => "travelpoints"), "rq.req_start = tp.t_id");
+		$select->where("
+						SUBTIME(rq.req_datetime, rq.req_toleranceDuration) <= '".$date."'
+						AND
+						ADDTIME(rq.req_datetime, rq.req_toleranceDuration) >= '".$date."'
+						");
+		
+		$qry=$select->query();
+		$array=$qry->fetchAll();
+		return $array;
+	}
+	
+	/**
 	* Speichert einen Routenpunkt
 	*
 	* @return int|false ID des Wegpunktes oder false 

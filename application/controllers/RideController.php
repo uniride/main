@@ -31,7 +31,11 @@ class RideController extends Zend_Controller_Action
 	 * @return void
 	 */
     public function indexAction()
-    {
+    {    	
+    	if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+    		$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+    	}
+    	
     	$dbTravelpoints = new Model_Ride_DbTravelpoints();
     	$this->view->travelpoints = $dbTravelpoints->getTravelpointsByUserId(0);
 
@@ -57,8 +61,12 @@ class RideController extends Zend_Controller_Action
 	 *
 	 * @return void
 	 */
-	public function saverouteAction() {
-		 
+	public function saverouteAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 	 
 		if (isset($_POST['start']) && $_POST['start'] != '') {
 			$dbTravelpoints = new Model_Ride_DbTravelpoints();
 			$dbRoutes = new Model_Ride_DbRoutes();
@@ -92,7 +100,12 @@ class RideController extends Zend_Controller_Action
 	 * 
 	 * @return void
 	 */
-	public function deleterideAction() {
+	public function deleterideAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		$dbRoutes = new Model_Ride_DbRoutes();
 		$request = $this->getRequest ();
 		$dbRoutes->deleteRide($request->getParam('id'));
@@ -106,7 +119,12 @@ class RideController extends Zend_Controller_Action
 	 * @link http://www.uniride.de/de/ride/show
 	 * @return void
 	 */
-	public function showAction() {
+	public function showAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		$dbRoutes = new Model_Ride_DbRoutes();
 		
 		$routes = $dbRoutes->getRoutesByUserId($this->sGlobal->uId);
@@ -122,7 +140,12 @@ class RideController extends Zend_Controller_Action
 	*
 	* @return void
 	*/
-	public function riderequestAction() {
+	public function riderequestAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		$dbTravelpoints = new Model_Ride_DbTravelpoints();
 		$this->view->travelpoints = $dbTravelpoints->getTravelpointsByUserId(0);
 		
@@ -133,7 +156,12 @@ class RideController extends Zend_Controller_Action
 	 *
 	 * @return void
 	 */
-	public function saverouterequestAction() {
+	public function saverouterequestAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		if (isset($_POST['start']) && $_POST['start'] != '') {
 			$dbTravelpoints = new Model_Ride_DbTravelpoints();
 			$dbRouterequests = new Model_Ride_DbRouterequests();
@@ -153,7 +181,7 @@ class RideController extends Zend_Controller_Action
 			$destination = explode(",", $destinationData['koords']);
 			$destinationId = $dbTravelpoints->getTravelpointsByKoords($destination[0], $destination[1]);
 			
-			$dbRouterequests->saveRouteRequest( $this->sGlobal->uId, $dateAndTime, $destinationId['t_id'], $startPoint, $toleranceDuration);
+			$dbRouterequests->saveRouteRequest( $this->sGlobal->uId, $dateAndTime, $destinationId['t_id'], $startPoint, '00:' . $toleranceDuration . ':00');
 			
 		}
 	}
@@ -163,11 +191,15 @@ class RideController extends Zend_Controller_Action
 	 * 
 	 * @return array Array mit Marker-Informationen
 	 */
-	public function getrelevantmarkersAction() {
-		
+	public function getrelevantmarkersAction()
+	{
+		if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+			$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+		}
+		 
 		$dbTravelpoints = new Model_Ride_DbTravelpoints();
 		
-		$travelpoints = $dbTravelpoints->getAllTravelpoints();
+		$travelpoints = $dbTravelpoints->getRelevantTravelpointsByDate($_POST['date']);
 		
 		$input = str_replace('"', '', json_decode($_POST['inputfield'], true));
 		
@@ -208,77 +240,5 @@ class RideController extends Zend_Controller_Action
 		$d = $R * $c;
 		
 		return $d * 1000;
-	}
-	
-	private function computeDistance2( $lat1, $lon1, $lat2, $lon2)
-	{
-		// Based on http://www.ngs.noaa.gov/PUBS_LIB/inverse.pdf
-		// using the "Inverse Formula" (section 4)
-	
-		$MAXITERS = 20;
-		// Convert lat/long to radians
-		$lat1 *= pi() / 180.0;
-		$lat2 *= pi() / 180.0;
-		$lon1 *= pi() / 180.0;
-		$lon2 *= pi() / 180.0;
-	
-		$a = 6378137.0; // WGS84 major axis
-		$b = 6356752.3142; // WGS84 semi-major axis
-		$f = ($a - $b) / $a;
-		$aSqMinusBSqOverBSq = ($a * $a - $b * $b) / ($b * $b);
-	
-		$L = $lon2 - $lon1;
-		$A = 0.0;
-		$U1 = atan((1.0 - $f) * tan($lat1));
-		$U2 = atan((1.0 - $f) * tan($lat2));
-	
-		$cosU1 = cos($U1);
-		$cosU2 = cos($U2);
-		$sinU1 = sin($U1);
-		$sinU2 = sin($U2);
-		$cosU1cosU2 = $cosU1 * $cosU2;
-		$sinU1sinU2 = $sinU1 * $sinU2;
-	
-		$sigma = 0.0;
-		$deltaSigma = 0.0;
-		$cosSqAlpha = 0.0;
-		$cos2SM = 0.0;
-		$cosSigma = 0.0;
-		$sinSigma = 0.0;
-		$cosLambda = 0.0;
-		$sinLambda = 0.0;
-	
-		$lambda = $L; // initial guess
-		for ($iter = 0; $iter < $MAXITERS; $iter++)
-		{
-			$lambdaOrig = $lambda;
-			$vcosLambda = cos($lambda);
-			$sinLambda = sin($lambda);
-			$t1 = $cosU2 * $sinLambda;
-			$t2 = $cosU1 * $sinU2 - $sinU1 * $cosU2 * $cosLambda;
-			$sinSqSigma = $t1 * $t1 + $t2 * $t2; // (14)
-			$sinSigma = sqrt($sinSqSigma);
-			$cosSigma = $sinU1sinU2 + $cosU1cosU2 * $cosLambda; // (15)
-			$sigma = atan2($sinSigma, $cosSigma); // (16)
-			$sinAlpha = ($sinSigma == 0) ? 0.0 : $cosU1cosU2 * $sinLambda / $sinSigma; // (17)
-			$cosSqAlpha = 1.0 - $sinAlpha * $sinAlpha;
-			$cos2SM = ($cosSqAlpha == 0) ? 0.0 : $cosSigma - 2.0 * $sinU1sinU2 / $cosSqAlpha; // (18)
-	
-			$uSquared = $cosSqAlpha * $aSqMinusBSqOverBSq; // defn
-			$A = 1 + ($uSquared / 16384.0) * (4096.0 + $uSquared * (-768 + $uSquared * (320.0 - 175.0 * $uSquared)));
-			$B = ($uSquared / 1024.0) * (256.0 + $uSquared * (-128.0 + $uSquared * (74.0 - 47.0 * $uSquared)));
-			$C = ($f / 16.0) * $cosSqAlpha * (4.0 + $f * (4.0 - 3.0 * $cosSqAlpha)); // (10)
-			$cos2SMSq = $cos2SM * $cos2SM;
-			$deltaSigma = $B * $sinSigma * ($cos2SM + ($B / 4.0) * ($cosSigma * (-1.0 + 2.0 * $cos2SMSq) - ($B / 6.0) * $cos2SM * (-3.0 + 4.0 * $sinSigma * $sinSigma) * (-3.0 + 4.0 * $cos2SMSq)));
-	
-			$lambda = $L + (1.0 - $C) * $f * $sinAlpha * ($sigma + $C * $sinSigma * ($cos2SM + $C * $cosSigma * (-1.0 + 2.0 * $cos2SM * $cos2SM))); // (11)
-	
-			$delta = ($lambda - $lambdaOrig) / $lambda;
-	
-			if (abs($delta) < exp(-12))
-				break;
-		}
-	
-		return ($b * $A * ($sigma - $deltaSigma)) / 1000;
 	}
 }

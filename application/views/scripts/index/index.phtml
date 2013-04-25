@@ -18,14 +18,14 @@
 	<div class="Content">
 	<div><?php echo $this->translation->translate("Willkommen bei der MFZ der Uni Siegen"); ?></div>
 	<?php if($this->user): ?>
-		<img src="https://graph.facebook.com/<?php echo $this->user['username']?>/picture"/>
-		<?php echo $this->userProfile['name']; ?><br />
+		<img src="https://graph.facebook.com/<?php echo $this->userProfile['id']?>/picture"/>
+		<?php echo $this->userProfile['first_name']; ?> <?php echo $this->userProfile['last_name']; ?><br />
 		<?php echo $this->userProfile['gender']; ?><br />
 		<?php echo (key_exists('email', $this->userProfile)) ? $this->userProfile['email'] : ""; ?><br />
 		<?php echo $this->userProfile['id']; ?><br />
 		<br />
 		<br />
-		<a href="<?php echo $this->logoutUrl; ?>">Facebook Logout</a>
+		<a href="<?php echo $this->logoutUrl; ?>">Logout</a>
 		<?php //print_r($this->userProfile); ?>
 		<br >
 		<?php //print_r($this->userFriends); ?>
@@ -38,8 +38,9 @@
 			<?php endforeach; ?>
 		<?php endif; ?>
 	<?php else: ?>
-		<a href="<?php echo $this->loginUrl; ?>">Facebook Login.</a>
+		<a href="<?php echo $this->loginUrl; ?>">Facebook Login</a>
 	<?php endif; ?>
+	<?php //print_r($this->userProfile); ?>
 	<div id="chart_div1" style="float:left;"></div>
 	<div id="chart_div2" style="float:left;"></div>
 	<div class="clearfix"></div>

@@ -25,6 +25,7 @@ class IndexController extends Zend_Controller_Action
 	public function init() {
 		$this->translation = Zend_Registry::get('Zend_Translate');
 		$this->sGlobal = new Zend_Session_Namespace("Global");
+		$this->sAuth = new Zend_Session_Namespace("Auth");
 	}
 	
 	/**
@@ -37,8 +38,13 @@ class IndexController extends Zend_Controller_Action
 	 */
     public function indexAction()
     {	
+    	if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+    		$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+    	}
+    	
     	$dbAccount = new Model_Index_DbAccount();
     	
+    	/*
     	$facebook = new Facebook(array(
     			'appId'  => '329633387331',
     			'secret' => 'e7bb638a72841d0a28a117ee6c7c7eeb',
@@ -74,10 +80,13 @@ class IndexController extends Zend_Controller_Action
     	} else {
     		$this->view->loginUrl = $facebook->getLoginUrl();
     	}
+    	*/
 
-    	$this->view->user = $user;
-    	$this->view->userProfile = $user_profile;
-    	$this->view->userFriends = $user_friends;
+    	$this->view->user = $this->sAuth->facebookUser;
+    	$this->view->userProfile = $this->sAuth->facebookUserProfile;
+    	//$this->view->userFriends = $user_friends;
+    	
+    	$this->view->logoutUrl = $this->_helper->url->url(array('controller'=>'auth', 'action'=>'logout'), 'default', true);
     	
     	$this->view->variable = "index";
     }
@@ -89,6 +98,9 @@ class IndexController extends Zend_Controller_Action
      */
 	public function accountAction()
     {
+    	if (!isset($this->sGlobal->uId) && !Zend_Auth::getInstance ()->hasIdentity ()) {
+    		$this->_helper->redirector->gotoRoute ( array('action' => 'index', 'controller' => 'auth'), 'default' );
+    	}
     	$this->view->variable = "konto";	
     }
 }
