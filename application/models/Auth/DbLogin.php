@@ -4,9 +4,9 @@ class Model_Auth_DbLogin extends Zend_Db_Table_Abstract
 {
 	protected $_name = 'users';
 	
-	public function getLogin($user)
+	public function getLogin($email)
 	{
-		$row = $this->fetchRow("user =  '".$user."'");
+		$row = $this->fetchRow("u_Email =  '".$email."'");
 		if (!$row) {
 			return false;
 		}

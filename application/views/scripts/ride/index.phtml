@@ -1,6 +1,10 @@
-<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
-<br /><br />    
-    <div>
+<div class="box contentLeft">
+	<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'navigation')); ?>
+</div>
+<div class="box contentRight offer yellow right">
+	<div class="boxHeader">Anbieten<span></span></div>
+    <div class="boxContent">
+    	<div>
     <?php print_r($this->test); ?><br /><br />
     <b>Start: </b>
     <input type="text" id="start" style="width: 200px;" />
@@ -112,5 +116,7 @@
     <span id="debug"></span>
     <p>Distanz: <span id="total"></span></p>
     </div>
-    <div id="map_canvas" style="top:30px; height: 600px; width: 600px;"></div>
-    <br /><br /><br />
+    <div id="map_canvas" style="top:30px; height: 411px; width: 500px;"></div>
+    </div>
+</div>
+<div class="clearfix"></div>

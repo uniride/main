@@ -1,4 +1,9 @@
-<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
+<div class="box contentLeft">
+	<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'navigation')); ?>
+</div>
+<div class="box contentRight account green right">
+	<div class="boxHeader">Konto<span></span></div>
+    <div class="boxContent">
 <a href="<?php echo $this->addCarLink ?>">Fahrzeug hinzufügen</a>
 
 <p>
@@ -17,3 +22,6 @@
 <p>
   <?php endforeach; ?>
 </p>
+        </div>
+</div>
+<div class="clearfix"></div>

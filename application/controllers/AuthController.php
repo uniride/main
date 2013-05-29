@@ -67,6 +67,8 @@ class AuthController extends Zend_Controller_Action
     	
     	} else {
     		$this->view->loginUrl = $facebook->getLoginUrl();
+			$this->view->registrationUrl = $this->_helper->url->url(array('controller'=>'auth', 'action'=>'registration'), 'default');
+			$this->view->loginForm = $this->getLoginForm();
     	}
     }
     
@@ -77,15 +79,15 @@ class AuthController extends Zend_Controller_Action
         $authAdapter = new Zend_Auth_Adapter_DbTable($db);
 	       $authAdapter
 	           ->setTableName('users')
-	           ->setIdentityColumn('user')
-	           ->setCredentialColumn('password')
+	           ->setIdentityColumn('u_Email')
+	           ->setCredentialColumn('u_Password')
 	           ->setCredentialTreatment('MD5(?)')    
 	       ;           
 	       $authAdapter
-	           ->setIdentity($params['user'])
+	           ->setIdentity($params['email'])
 	           ->setCredential($params['password'])	                 	            
 	       ;
-	    return $authAdapter;  	
+	    return $authAdapter;
 	}
     
     
@@ -114,17 +116,20 @@ class AuthController extends Zend_Controller_Action
 				if (!($result->isValid ()))
 				{	
 						$loginForm->setDescription ( "Benutzername oder Passwort falsch!" );
-						$this->view->loginForm = $loginForm;	
+						$this->view->loginForm = $loginForm;
+						return $this->render ( 'index' );
 				}
 				else 
 				{			
 					$sessionDb = new Model_Auth_DbSession();	
-					$user = $loginDb->getLogin($loginValues["user"]);							
+					$user = $loginDb->getLogin($loginValues["email"]);						
 					$session = Zend_Session::getId();
-					$this->sAuth->Id = $user['id'];
-					$this->sAuth->User = $user["user"];
-					$this->sAuth->Fullname = $user["fullname"];
-					if($user["isAdmin"]) {
+					$this->sAuth->Id = $user['u_Id'];
+					$this->sGlobal->uId = $user['u_Id'];
+					$this->sAuth->Firstname = $user["u_Firstname"];
+					$this->sAuth->Lastname = $user["u_Lastname"];
+					$this->sAuth->Email = $user["u_Email"];
+					if($user["u_IsAdmin"]) {
 						$this->sAuth->isAdmin = true;
 					} else {
 						$this->sAuth->isAdmin = false;
@@ -132,17 +137,50 @@ class AuthController extends Zend_Controller_Action
 					if($this->sAuth->isAdmin) {
 						$this->_helper->redirector->gotoRoute ( array( 'controller' => 'index', 'action' => 'index'), 'default' );
 					} else {
-						$this->_helper->redirector->gotoRoute ( array( 'controller' => 'recipients', 'action' => 'index'), 'default' );
+						$this->_helper->redirector->gotoRoute ( array( 'controller' => 'index', 'action' => 'index'), 'default' );
 					}							
 				}	
 			}
     }
+	
+	public function registrationAction(){
+		$registrationForm = $this->getRegistrationForm();
+    	$this->view->registrationForm = $registrationForm;
+    	
+    	$dbUsers = new Model_Index_DbAccount();
+    	
+    	$request = $this->getRequest ();
+    	
+    	if ($request->isPost ()) {
+	    	if (! $registrationForm->isValid ( $request->getPost () )) {
+	    		$this->view->registrationForm = $registrationForm;
+	    	} else {
+	    		$regValues = $registrationForm->getValues ();
+	    		if($dbUsers->checkIfAccountExists($regValues['u_Email']) == false) {
+		    		if($dbUsers->createAccount($regValues['u_Firstname'], $regValues['u_Lastname'], $regValues['u_Gender'], $regValues['u_Email'], 0, md5($regValues['u_Password']))) {
+						$this->_helper->redirector->gotoRoute ( array( 'controller' => 'index', 'action' => 'index'), 'default');
+		    		} else {
+		    			echo "Account konnte nicht erstellt werden!";
+		    		}
+	    		} else {
+	    			echo "Ein Account mit dieser Email existiert bereits!";
+	    		}
+	    	}
+    	}
+	}
     
 	public function getLoginForm() 
 	{
-
 		return new Form_Auth_LoginForm ( array (
 		'action' => $this->_helper->url->url(array('controller'=>'auth', 'action'=>'process'), 'default'),
+		'method' => 'post'
+		) );
+	}
+	
+	public function getRegistrationForm() 
+	{
+		return new Form_Auth_RegistrationForm ( array (
+		'action' => $this->_helper->url->url(array('controller'=>'auth', 'action'=>'registration'), 'default'),
 		'method' => 'post'
 		) );
 	}

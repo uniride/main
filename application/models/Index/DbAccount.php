@@ -69,8 +69,8 @@ class Model_Index_DbAccount extends Zend_Db_Table_Abstract
 	 * @param int $id FacebookId
 	 * @return bool
 	 */
-	public function createAccount($firstName, $lastName, $gender, $email, $id) {
-		$data = array('u_FBId' => $id, 'u_Lastname' => $lastName, 'u_Firstname' => $firstName, 'u_Gender' => $gender, 'u_Email' => $email);
+	public function createAccount($firstName, $lastName, $gender, $email, $id, $password = NULL) {
+		$data = array('u_FBId' => $id, 'u_Lastname' => $lastName, 'u_Firstname' => $firstName, 'u_Gender' => $gender, 'u_Email' => $email, 'u_Password' => $password);
 
 		$u_Id = $this->insert($data);
 		if ($u_Id > 0) {

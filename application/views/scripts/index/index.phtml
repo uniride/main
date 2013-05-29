@@ -1,23 +1,30 @@
 <?php  $this->translation = Zend_Registry::get('Zend_Translate'); ?>
-<div class="Manager">
-<div class="Left">
-	<div class="LeftHeader">
-		<?php echo $this->translation->translate("Navigation"); ?>
-	</div>
-	<div class="Info">
-	<?php echo $this->translation->translate("Welcome"); ?>,<br />
-	<?php echo $this->Fullname; ?>
-	</div>
-	<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
-	
+
+
+<div class="box red _1c2r search">
+    <div class="boxHeader">Suchen<span></span></div>
+    <div class="boxContent">
+		<?php echo $this->requestForm ?>
+    </div>
 </div>
-<div class="Right">
-	<div class="RightHeader">
-		<?php echo $this->translation->translate("Uniride.de"); ?>
-	</div>
-	<div class="Content">
-	<div><?php echo $this->translation->translate("Willkommen bei der MFZ der Uni Siegen"); ?></div>
-	<?php if($this->user): ?>
+<div class="box yellow _1c2r offer">
+    <div class="boxHeader">Anbieten<span></span></div>
+    <div class="boxContent">
+		<?php echo $this->rideForm ?>
+    </div>
+</div>
+<div class="box blue _1c2r calendar">
+    <div class="boxHeader">Kalender<span></span></div>
+    <div class="boxContent">
+		<a href="/de/calendar">Kalender</a>
+    </div>
+</div>
+<div class="box grey right _1c2r account">
+    <div class="boxHeader">Konto<span></span></div>
+</div>
+<div class="clearfix"></div>
+            
+	<?php if($this->user && false): ?>
 		<img src="https://graph.facebook.com/<?php echo $this->userProfile['id']?>/picture"/>
 		<?php echo $this->userProfile['first_name']; ?> <?php echo $this->userProfile['last_name']; ?><br />
 		<?php echo $this->userProfile['gender']; ?><br />
@@ -38,16 +45,7 @@
 			<?php endforeach; ?>
 		<?php endif; ?>
 	<?php else: ?>
-		<a href="<?php echo $this->loginUrl; ?>">Facebook Login</a>
+		<!-- <a href="<?php echo $this->loginUrl; ?>">Facebook Login</a>  -->
 	<?php endif; ?>
 	<?php //print_r($this->userProfile); ?>
-	<div id="chart_div1" style="float:left;"></div>
-	<div id="chart_div2" style="float:left;"></div>
-	<div class="clearfix"></div>
-	</div>
-</div>
-<div class="clearfix"></div>
-</div>
-
-
 

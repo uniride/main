@@ -57,6 +57,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 		$route = new Zend_Controller_Router_Route ( ':language/:controller/:action/*', array ('language' => 'de', 'controller' => 'index', 'action' => 'index' ) );
 		$router->addRoute ( 'default', $hostnameRoute->chain($route));
 		
+		/* HTTPS Routen */
+		
+		$hostnameRoute = new Zend_Controller_Router_Route_Hostname("www.uniride.de", array(), array(), 'https');
+		
+		$route = new Zend_Controller_Router_Route ( ':language/:controller/:action/*', array ('language' => 'de', 'controller' => 'index', 'action' => 'index' ) );
+		$router->addRoute ( 'defaultSSL', $hostnameRoute->chain($route));
+		
 		Zend_Controller_Front::getInstance ()->setRouter ( $router );
 		
 	}

@@ -26,6 +26,8 @@ class IndexController extends Zend_Controller_Action
 		$this->translation = Zend_Registry::get('Zend_Translate');
 		$this->sGlobal = new Zend_Session_Namespace("Global");
 		$this->sAuth = new Zend_Session_Namespace("Auth");
+		
+		$this->view->userProfile = $this->sAuth->facebookUserProfile;
 	}
 	
 	/**
@@ -43,6 +45,7 @@ class IndexController extends Zend_Controller_Action
     	}
     	
     	$dbAccount = new Model_Index_DbAccount();
+		$dbTravelpoints = new Model_Ride_DbTravelpoints();
     	
     	/*
     	$facebook = new Facebook(array(
@@ -86,6 +89,14 @@ class IndexController extends Zend_Controller_Action
     	$this->view->userProfile = $this->sAuth->facebookUserProfile;
     	//$this->view->userFriends = $user_friends;
     	
+		$destinationsArray = array();
+		foreach($dbTravelpoints->getTravelpointsByUserId(0) as $destination){
+			$destinationsArray[$destination['t_id']] = $destination['t_name'];
+		}
+		
+		$this->view->requestForm = $this->getRequestForm($destinationsArray);
+		$this->view->rideForm = $this->getRideForm($destinationsArray);
+		
     	$this->view->logoutUrl = $this->_helper->url->url(array('controller'=>'auth', 'action'=>'logout'), 'default', true);
     	
     	$this->view->variable = "index";
@@ -103,4 +114,21 @@ class IndexController extends Zend_Controller_Action
     	}
     	$this->view->variable = "konto";	
     }
+	
+	public function getRequestForm($destinationsArray) 
+	{
+		return new Form_Index_RequestForm ( array (
+		'action' => $this->_helper->url->url(array('controller'=>'ride', 'action'=>'riderequest'), 'default'),
+		'method' => 'post'
+		),$destinationsArray );
+	}
+	
+	public function getRideForm($destinationsArray) 
+	{
+		return new Form_Index_RideForm ( array (
+		'action' => $this->_helper->url->url(array('controller'=>'ride', 'action'=>'index'), 'default'),
+		'method' => 'post'
+		),$destinationsArray );
+	}
+	
 }

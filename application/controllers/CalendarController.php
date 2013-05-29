@@ -12,6 +12,9 @@ class CalendarController extends Zend_Controller_Action
 	{
 		$this->translation = Zend_Registry::get('Zend_Translate');
 		$this->sGlobal = new Zend_Session_Namespace("Global");
+		$this->sAuth = new Zend_Session_Namespace("Auth");
+		
+		$this->view->userProfile = $this->sAuth->facebookUserProfile;
 	}
 	
     public function indexAction()

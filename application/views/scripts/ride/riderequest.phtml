@@ -1,5 +1,9 @@
-<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'Navigation')); ?>
-<br /><br />
+<div class="box contentLeft">
+	<?php echo $this->navigation()->menu()->renderMenu($this->navigation()->findOneByLabel('MainNavigation'), array('ulClass' => 'navigation')); ?>
+</div>
+<div class="box contentRight search red right">
+	<div class="boxHeader">Suchen<span></span></div>
+    <div class="boxContent">
 <script>
 	$(function() {
 		$( "#datePicker" ).datepicker({
@@ -146,3 +150,6 @@
     <br /><br />
     <span id="debug"></span>
     </div>
+        </div>
+</div>
+<div class="clearfix"></div>
